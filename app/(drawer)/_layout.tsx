@@ -4,7 +4,12 @@ import { Drawer } from 'expo-router/drawer';
 import { Pressable, StyleSheet } from 'react-native';
 
 const DrawerLayout = () => (
-  <Drawer>
+  <Drawer
+    screenOptions={{
+      drawerStyle: {
+        width: 490,
+      },
+    }}>
     <Drawer.Screen
       name="index"
       options={{
