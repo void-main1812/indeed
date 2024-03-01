@@ -15,19 +15,50 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: 'black',
+        tabBarStyle: {
+          height: 100,
+          paddingBottom: 20,
+          paddingTop: 20,
+        },
       }}>
       <Tabs.Screen
-        name="index"
+        name="home/index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Home',
+          tabBarLabelStyle: {
+            fontSize: 12,
+          },
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="chats/index"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Chats',
+          tabBarLabelStyle: {
+            fontSize: 12,
+          },
+          tabBarIcon: ({ color }) => <TabBarIcon name="send-o" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="user/index"
+        options={{
+          title: 'User',
+          tabBarLabelStyle: {
+            fontSize: 12,
+          },
+          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="notification/index"
+        options={{
+          title: 'Updates',
+          tabBarLabelStyle: {
+            fontSize: 12,
+          },
+          tabBarIcon: ({ color }) => <TabBarIcon name="bell" color={color} />,
         }}
       />
     </Tabs>
