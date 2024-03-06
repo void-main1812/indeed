@@ -1,8 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
 
 import DrawerNavigator from './drawer-navigator';
 import Modal from '../screens/modal';
+import { SlideInRight } from 'react-native-reanimated';
 
 export type RootStackParamList = {
   DrawerNavigator: undefined;
