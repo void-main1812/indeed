@@ -1,6 +1,13 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Tabs } from 'expo-router';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { StackScreenProps } from '@react-navigation/stack';
 import { StyleSheet } from 'react-native';
+
+import { RootStackParamList } from '.';
+import One from '../screens/one';
+import Two from '../screens/two';
+
+const Tab = createBottomTabNavigator();
 
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
@@ -9,32 +16,40 @@ function TabBarIcon(props: {
   return <FontAwesome size={28} style={styles.tabBarIcon} {...props} />;
 }
 
-export default function TabLayout() {
+type Props = StackScreenProps<RootStackParamList, 'TabNavigator'>;
+
+export default function TabNavigator({ navigation }: Props) {
   return (
-    <Tabs
+    <Tab.Navigator
       screenOptions={{
-        headerShown: false,
         tabBarActiveTintColor: 'black',
+
+        headerShown: false,
       }}>
-      <Tabs.Screen
-        name="index"
+      <Tab.Screen
+        name="One"
+        component={One}
         options={{
           title: 'Tab One',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
-      <Tabs.Screen
-        name="two"
+      <Tab.Screen
+        name="Two"
+        component={Two}
         options={{
           title: 'Tab Two',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
-    </Tabs>
+    </Tab.Navigator>
   );
 }
 
 const styles = StyleSheet.create({
+  headerRight: {
+    marginRight: 15,
+  },
   tabBarIcon: {
     marginBottom: -3,
   },

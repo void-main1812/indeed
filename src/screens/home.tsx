@@ -1,6 +1,6 @@
 import { Text, View } from 'react-native';
 
-import EditScreenInfo from '../../components/edit-screen-info';
+import EditScreenInfo from '../components/edit-screen-info';
 
 const Page = () => {
   return (
