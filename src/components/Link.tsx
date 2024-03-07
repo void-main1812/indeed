@@ -1,6 +1,5 @@
-import { View, Text, TouchableHighlight, Pressable } from 'react-native';
 import React from 'react';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Pressable, Text } from 'react-native';
 
 type LinkProps = {
   onPress: () => void;

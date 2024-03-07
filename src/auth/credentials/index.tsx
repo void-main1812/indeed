@@ -1,12 +1,8 @@
 import { Image } from 'expo-image';
-import { StackScreenProps } from '@react-navigation/stack';
 import React from 'react';
 import { Pressable, Text, View } from 'react-native';
 import Input from '~/src/components/Input';
 import Link from '~/src/components/Link';
-import { useNavigation } from '@react-navigation/native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Auth = ({ navigation }: any) => {
   return (
