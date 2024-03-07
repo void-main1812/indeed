@@ -1,11 +1,12 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import DrawerNavigator from './drawer-navigator';
 import Modal from '../screens/modal';
-import { SlideInRight } from 'react-native-reanimated';
+import DrawerNavigator from './drawer-navigator';
+import Auth from '../auth/credentials';
 
 export type RootStackParamList = {
+  Authentication: undefined;
   DrawerNavigator: undefined;
   Modal: undefined;
   TabNavigator: undefined;
@@ -16,7 +17,8 @@ const Stack = createStackNavigator<RootStackParamList>();
 export default function RootStack() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="DrawerNavigator">
+      <Stack.Navigator initialRouteName="Authentication">
+        <Stack.Screen name="Authentication" component={Auth} options={{ headerShown: false }} />
         <Stack.Screen
           name="DrawerNavigator"
           component={DrawerNavigator}
