@@ -1,14 +1,12 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { StackScreenProps } from '@react-navigation/stack';
-import { StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { StyleSheet } from 'react-native';
 
-import { RootStackParamList } from '.';
-import Home from '../screens/home';
-import Chats from '../screens/chats';
-import User from '../screens/user';
-import Updates from '../screens/updates';
 import { BlurView } from 'expo-blur';
+import Chats from '../screens/chats';
+import Home from '../screens/home';
+import Updates from '../screens/updates';
+import User from '../screens/user';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,9 +14,8 @@ function TabBarIcon(props: { name: React.ComponentProps<typeof Ionicons>['name']
   return <Ionicons size={28} style={styles.tabBarIcon} {...props} />;
 }
 
-type Props = StackScreenProps<RootStackParamList, 'TabNavigator'>;
 
-export default function TabNavigator({ navigation }: Props) {
+export default function TabNavigator() {
   return (
       <Tab.Navigator
         screenOptions={{

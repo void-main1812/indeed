@@ -1,8 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { DrawerNavigationProp, createDrawerNavigator } from '@react-navigation/drawer';
-import { StackScreenProps } from '@react-navigation/stack';
-import { Pressable, Text, View } from 'react-native';
 import { Image } from 'expo-image';
+import { Pressable, View } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -10,7 +9,6 @@ import { wp } from '~/lib/utils/get_screen_dimensions';
 import { RootStackParamList } from '.';
 import TabNavigator from './tab-navigator';
 
-type Props = StackScreenProps<RootStackParamList, 'DrawerNavigator'>;
 type DrawerNavProp = DrawerNavigationProp<RootStackParamList, 'DrawerNavigator'>;
 
 const Drawer = createDrawerNavigator();
