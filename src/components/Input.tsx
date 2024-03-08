@@ -22,9 +22,9 @@ const Input = ({
 }: InputProps) => {
   return (
     <View className="flex gap-[8px]">
-      <Text className="font-normal">{label}</Text>
+      <Text className="font-normal text-lg">{label}</Text>
       <TextInput
-        className="px-[16px] h-[60px] bg-[#FAFAFA] w-full rounded-[8px] border border-[#E7E7E7]"
+        className="px-[16px] h-[60px] bg-[#FAFAFA] w-full rounded-[8px] border border-[#E7E7E7] text-lg"
         placeholder={placeholder}
         onChangeText={onChangeText}
         placeholderTextColor="#A1A1AA"

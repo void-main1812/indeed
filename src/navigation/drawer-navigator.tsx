@@ -32,7 +32,7 @@ const DrawerHeader = () => {
       }}>
       <Image
         source={require('../../assets/indeed_logo.png')}
-        style={{ height: 27, width: 100 }}></Image>
+        style={{ height: 30, width: 120 }} contentFit='contain'/>
       <Pressable style={{ padding: 5 }} onPress={() => navigation.openDrawer()}>
         <Ionicons name="menu" size={24} />
       </Pressable>
@@ -46,11 +46,13 @@ export default function DrawerNavigator() {
       <Drawer.Navigator
         screenOptions={{
           drawerPosition: 'right',
+          swipeEdgeWidth: 150,
+          swipeMinDistance: 50,
           header() {
             return <DrawerHeader />;
           },
           drawerStyle: {
-            width: 490,
+            width: wp(100),
           },
         }}>
         <Drawer.Screen
