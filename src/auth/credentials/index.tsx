@@ -38,7 +38,7 @@ const Auth = ({ navigation }: any) => {
               <Text className="underline p-[4] font-semibold text-lg">Forgot Password</Text>
             </Pressable>
 
-            <PrimaryButton onPress={() => navigation.navigate('DrawerNavigator')} text="Continue" />
+            <PrimaryButton onPress={() => navigation.navigate('Welcome')} text="Verify" />
           </View>
           <View className="w-full">
             <Saperator text={'Or Continue with'} />
