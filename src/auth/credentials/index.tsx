@@ -13,7 +13,7 @@ const Auth = ({ navigation }: any) => {
     <ScrollView
       className="h-full w-full bg-white"
       contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}>
-      <View className="bg-white px-[25px] h-full w-full justify-center" style={{ gap: hp(7.2) }}>
+      <View className="bg-white px-[25px] h-full w-full justify-center" style={{ gap: hp(4.8) }}>
         <View className="flex items-center" style={{ gap: hp(0.8) }}>
           <Image
             source={require('../../../assets/indeed_logo.png')}
@@ -38,7 +38,7 @@ const Auth = ({ navigation }: any) => {
               <Text className="underline p-[4] font-semibold text-lg">Forgot Password</Text>
             </Pressable>
 
-            <PrimaryButton onPress={() => navigation.navigate('Welcome')} text="Verify" />
+            <PrimaryButton onPress={() => navigation.replace('OnboardingNavigator')} text="Verify" />
           </View>
           <View className="w-full">
             <Saperator text={'Or Continue with'} />

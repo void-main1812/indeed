@@ -2,15 +2,14 @@
   "name": "indeed",
   "version": "1.0.0",
   "scripts": {
-    "android": "expo start --android",
+    "android": "expo run:android",
     "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
-    "ios": "expo start --ios",
+    "ios": "expo run:ios",
     "start": "expo start --reset-cache",
     "web": "expo start --web"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
-    "@react-native-community/art": "^1.2.0",
     "@react-navigation/bottom-tabs": "^6.5.8",
     "@react-navigation/drawer": "^6.6.6",
     "@react-navigation/native": "^6.1.14",
