@@ -7,7 +7,7 @@ import { BlurView } from 'expo-blur';
 const Loading = ({ navigation }: any) => {
   useEffect(() => {
     const navigateToHome = setTimeout(() => {
-      navigation.navigate('Authentication');
+      navigation.replace('Authentication');
     }, 3000);
 
     return () => clearTimeout(navigateToHome);
