@@ -21,7 +21,7 @@ const Loading = ({ navigation }: any) => {
           style={{ height: 48, width: 140 }}
           contentFit="contain"
         />
-        <Text className="text-lg text-[#003A9B]">Get the Job you Deserve</Text>
+        <Text className="text-lg text-primary">Get the Job you Deserve</Text>
       </View>
       <View className="w-[80%] h-[60] rounded-[8] bg-transparent absolute z-10 bottom-10 overflow-hidden border-2 border-white/30">
         <BlurView

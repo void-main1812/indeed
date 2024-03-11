@@ -1,12 +1,12 @@
-import { View, Text, Pressable } from 'react-native';
 import React from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Text, View } from 'react-native';
 
 const Home = ({ navigation }: any) => {
+
   return (
-      <View className="h-full w-full">
-        <Text>Home</Text>
-      </View>
+    <View className="h-full w-full">
+      <Text>Home</Text>
+    </View>
   );
 };
 

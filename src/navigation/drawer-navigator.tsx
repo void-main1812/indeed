@@ -14,6 +14,7 @@ type DrawerNavProp = DrawerNavigationProp<RootStackParamList, 'DrawerNavigator'>
 const Drawer = createDrawerNavigator();
 
 const DrawerHeader = () => {
+
   const navigation = useNavigation<DrawerNavProp>();
 
   return (
@@ -32,7 +33,9 @@ const DrawerHeader = () => {
       }}>
       <Image
         source={require('../../assets/indeed_logo.png')}
-        style={{ height: 30, width: 120 }} contentFit='contain'/>
+        style={{ height: 30, width: 120 }}
+        contentFit="contain"
+      />
       <Pressable style={{ padding: 5 }} onPress={() => navigation.openDrawer()}>
         <Ionicons name="menu" size={24} />
       </Pressable>
