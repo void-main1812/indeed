@@ -11,8 +11,8 @@ type SocialAuthButtonProps = {
 const SocialAuthButton = ({ provider, url }: SocialAuthButtonProps) => {
   return (
     <View className="gap-y-[8] justify-center items-center">
-      <Image source={url} style={{height: hp(5), width: hp(5)}} contentFit='contain' />
-      <Text className='text-lg' >{provider}</Text>
+      <Image source={url} style={{ height: hp(5), width: hp(5) }} contentFit="contain" />
+      <Text className="text-lg text-text">{provider}</Text>
     </View>
   );
 };

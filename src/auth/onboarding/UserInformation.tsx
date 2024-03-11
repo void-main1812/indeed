@@ -11,7 +11,7 @@ const UserInformation = ({ navigation }: any) => {
       <View className="h-full w-full bg-white px-[25] pt-[25] gap-y-[32] items-center">
         <View className="w-full gap-y-[16]">
           <Text className="text-2xl font-normal">Let's Start with your</Text>
-          <Text className="text-6xl font-bold text-[#003A9B]">Introduction</Text>
+          <Text className="text-6xl font-bold text-primary">Introduction</Text>
         </View>
         <ScrollView className="w-full" showsVerticalScrollIndicator={false}>
           <View className="w-full gap-y-[16] pb-[120]">

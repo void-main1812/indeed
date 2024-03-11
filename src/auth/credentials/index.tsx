@@ -20,7 +20,7 @@ const Auth = ({ navigation }: any) => {
             style={{ height: 40, width: 160 }}
             contentFit="contain"
           />
-          <Text className=" text-lg text-[#003A9B]">Get the Job you Deserve</Text>
+          <Text className=" text-lg text-primary">Get the Job you Deserve</Text>
         </View>
         <View className="w-full flex items-start" style={{ gap: hp(4.8) }}>
           <View>
@@ -59,10 +59,10 @@ const Auth = ({ navigation }: any) => {
           </View>
         </View>
         <View className="w-full items-center">
-          <Text className="w-[82%] text-center font-normal text-[#71717A] text-lg">
+          <Text className="w-[82%] text-center font-normal text-text-light text-lg">
             By Continuing to the application you agree to our{' '}
-            <Text className="font-semibold underline text-[#27272A]">Privacy Policy</Text>,{' '}
-            <Text className="font-semibold underline text-[#27272A]">Terms & Conditions</Text>
+            <Text className="font-semibold underline text-text-dark">Privacy Policy</Text>,{' '}
+            <Text className="font-semibold underline text-text-dark">Terms & Conditions</Text>
           </Text>
         </View>
       </View>

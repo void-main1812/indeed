@@ -5,7 +5,8 @@
     "android": "expo run:android",
     "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
     "ios": "expo run:ios",
-    "start": "expo start --reset-cache",
+    "start": "expo start",
+    "reset": "expo start --reset-cache",
     "web": "expo start --web"
   },
   "dependencies": {

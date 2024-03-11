@@ -17,8 +17,8 @@ const Welcome = ({ navigation }: any) => {
         </View>
         <View className="gap-[16] w-full">
           <Text className="text-4xl font-semibold">Hey!</Text>
-          <Text className="text-6xl font-bold text-[#003A9B]">Welcome Board,</Text>
-          <Text className="text-2xl">
+          <Text className="text-6xl font-bold text-primary">Welcome Board,</Text>
+          <Text className="text-2xl text-text">
             This is a Journey where you'll take the next major step to become successful person.
             Your Dream job 😁
           </Text>
