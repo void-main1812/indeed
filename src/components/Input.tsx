@@ -9,7 +9,7 @@ type InputProps = {
   onChangeText: (text: string) => void;
   classname?: string;
   labelClassName?: string;
-  label: string;
+  label?: string;
 };
 
 const Input = ({
@@ -23,8 +23,10 @@ const Input = ({
   label,
 }: InputProps) => {
   return (
-    <View className="flex gap-[8px]">
-      <Text className={`font-normal text-lg text-text ${labelClassName}`}>{label}</Text>
+    <View className="flex">
+      {label ? (
+        <Text className={`font-normal text-lg text-text mb-[8] ${labelClassName}`}>{label}</Text>
+      ) : null}
       <TextInput
         className={`px-[16px] h-[60px] bg-neutral-100 w-full rounded-[8px] border border-neutral-300 text-lg ${classname}`}
         placeholder={placeholder}

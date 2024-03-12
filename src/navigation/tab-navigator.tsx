@@ -24,7 +24,7 @@ export default function TabNavigator() {
         tabBarBackground: () => (
           <BlurView
             style={StyleSheet.absoluteFill}
-            intensity={75}
+            intensity={40}
             tint="light"
             experimentalBlurMethod="dimezisBlurView"
           />
