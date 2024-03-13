@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import { BlurView } from 'expo-blur';
 import Chats from '../screens/chats';
@@ -24,10 +24,9 @@ export default function TabNavigator() {
         tabBarBackground: () => (
           <BlurView
             style={StyleSheet.absoluteFill}
-            intensity={40}
+            intensity={75}
             tint="light"
-            experimentalBlurMethod="dimezisBlurView"
-          />
+            experimentalBlurMethod="dimezisBlurView"/>
         ),
         tabBarLabelStyle: {
           fontSize: 12,
