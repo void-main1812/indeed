@@ -1,5 +1,9 @@
 import React from 'react';
-import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
+import {
+  CardStyleInterpolators,
+  TransitionSpecs,
+  createStackNavigator,
+} from '@react-navigation/stack';
 
 // Import your onboarding screens here
 import Welcome from './Welcome';
@@ -16,14 +20,6 @@ export type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>();
 
 export default function OnboardingNavigator() {
-  const config: TransitionSpec = {
-    animation: 'timing',
-    config: {
-      duration: 250,
-      easing: Easing.linear,
-    },
-  };
-
   return (
     <Stack.Navigator
       initialRouteName="Welcome"
@@ -31,8 +27,8 @@ export default function OnboardingNavigator() {
         gestureEnabled: true,
         gestureResponseDistance: 100,
         transitionSpec: {
-          open: config,
-          close: config,
+          open: TransitionSpecs.TransitionIOSSpec,
+          close: TransitionSpecs.TransitionIOSSpec,
         },
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}>

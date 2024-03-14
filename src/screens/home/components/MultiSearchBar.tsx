@@ -1,20 +1,20 @@
-import { View, Text } from 'react-native';
 import React from 'react';
-import InputWithIcon from '~/src/components/InputWithIcon';
+import { View } from 'react-native';
+import Input from '~/src/components/Input';
 
 const MultiSearchBar = () => {
   return (
     <View className="w-full gap-0">
-      <InputWithIcon
+      <Input
         placeholder="Search Jobs, keywords or company"
         onChangeText={() => {}}
-        classname="rounded-b-none"
+        classname="rounded-b-none border-b-0 "
         icon="search"
       />
-      <InputWithIcon
+      <Input
         placeholder="Search City, State or Remote"
         onChangeText={() => {}}
-        classname="rounded-t-none bg-primary/10 border-primary/50"
+        classname="rounded-t-none bg-primary/10 border-primary/30"
         icon="location"
         iconColor="#003A9B"
       />

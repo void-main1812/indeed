@@ -31,7 +31,7 @@ export default function RootStack() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={'Loading'}
+        initialRouteName={'DrawerNavigator'}
         screenOptions={{
           gestureEnabled: true,
           gestureResponseDistance: 100,
