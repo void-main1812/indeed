@@ -1,13 +1,15 @@
 import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { FlatList, ScrollView, Text, View } from 'react-native';
 import MultiSearchBar from './components/MultiSearchBar';
 import FilterBar from './components/FilterBar';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Image } from 'expo-image';
+import { MockJobs } from '~/data/mockData';
+import JobCard from '~/src/components/JobCard';
 
 const Home = ({ navigation }: any) => {
   return (
-    <ScrollView className=" bg-white pt-[25]" contentContainerStyle={{ flexGrow: 1, rowGap: 40 }}>
+    <ScrollView className="bg-white pt-[25]" contentContainerStyle={{ flexGrow: 1, rowGap: 50 }}>
       <View className="gap-y-[24]">
         <View className="px-[25]">
           <MultiSearchBar />
@@ -30,7 +32,7 @@ const Home = ({ navigation }: any) => {
                 </Text>
               </View>
             </View>
-            <View className='w-full h-full' >
+            <View className="w-full h-full">
               <Image
                 source={require('../../../assets/illstrations/dreamJob.png')}
                 style={{ height: '100%', width: '50%' }}
@@ -39,6 +41,32 @@ const Home = ({ navigation }: any) => {
             </View>
           </LinearGradient>
         </View>
+      </View>
+      <View className="px-[25] gap-y-[24] pb-[150]">
+        <View>
+          <Text className="text-3xl font-semibold text-text">Best Picks for You</Text>
+          <Text className="text-lg font-light text-text-light">
+            Jobs based on your preference and activity on Indeed
+          </Text>
+        </View>
+        <FlatList
+          scrollEnabled={false}
+          data={MockJobs}
+          renderItem={({ item }) => (
+            <JobCard
+              name={item.name}
+              company={item.company}
+              key={item.id}
+              instantApply={item.instantApply}
+              location={item.location}
+              logo={item.logo}
+              salary={item.salary}
+              shift={item.shift}
+              time={item.time}
+            />
+          )}
+          keyExtractor={(item) => item.id.toString()}
+        />
       </View>
     </ScrollView>
   );
