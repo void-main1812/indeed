@@ -25,10 +25,10 @@ const JobCard = ({
   instantApply,
 }: JobCardProps) => {
   return (
-    <View className="p-6 mb-8 w-full bg-neutral-50 rounded-[16] border border-neutral-200 gap-y-6">
+    <View className="p-6 mb-4 w-full bg-neutral-50 rounded-[16] border border-neutral-200 gap-y-6">
       <View className="flex-row gap-x-4 items-center">
         <Image source={logo} style={{ height: 50, width: 50 }} contentFit="contain" />
-        <View className="gap-y-[4]">
+        <View>
           <Text className="text-3xl font-semibold">{name}</Text>
           <Text className="text-sm font-light">{company}</Text>
         </View>
