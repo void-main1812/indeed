@@ -1,7 +1,9 @@
 import { Ionicons } from '@expo/vector-icons';
 import { DrawerNavigationProp, createDrawerNavigator } from '@react-navigation/drawer';
 import { Image } from 'expo-image';
+import React from 'react';
 import { Pressable, View } from 'react-native';
+import { Drawer as PaperDrawer } from 'react-native-paper';
 
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -14,7 +16,6 @@ type DrawerNavProp = DrawerNavigationProp<RootStackParamList, 'DrawerNavigator'>
 const Drawer = createDrawerNavigator();
 
 const DrawerHeader = () => {
-
   const navigation = useNavigation<DrawerNavProp>();
 
   return (
@@ -58,14 +59,18 @@ export default function DrawerNavigator() {
             width: wp(100),
           },
         }}>
-        <Drawer.Screen
-          name="TabNavigator"
-          // @ts-ignore
-          component={TabNavigator}
-          options={{
-            drawerIcon: ({ size, color }) => <Ionicons name="square" size={size} color={color} />,
-          }}
-        />
+        <Drawer.Group screenOptions={{ title: 'Home' }}>
+          <>
+          </>
+        </Drawer.Group>
+          <Drawer.Screen
+            name="TabNavigator"
+            // @ts-ignore
+            component={TabNavigator}
+            options={{
+              drawerIcon: ({ size, color }) => <Ionicons name="square" size={size} color={color} />,
+            }}
+          />
       </Drawer.Navigator>
     </SafeAreaView>
   );
