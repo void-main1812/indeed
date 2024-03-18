@@ -3,7 +3,6 @@ import { DrawerNavigationProp, createDrawerNavigator } from '@react-navigation/d
 import { Image } from 'expo-image';
 import React from 'react';
 import { Pressable, View } from 'react-native';
-import { Drawer as PaperDrawer } from 'react-native-paper';
 
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -59,18 +58,14 @@ export default function DrawerNavigator() {
             width: wp(100),
           },
         }}>
-        <Drawer.Group screenOptions={{ title: 'Home' }}>
-          <>
-          </>
-        </Drawer.Group>
-          <Drawer.Screen
-            name="TabNavigator"
-            // @ts-ignore
-            component={TabNavigator}
-            options={{
-              drawerIcon: ({ size, color }) => <Ionicons name="square" size={size} color={color} />,
-            }}
-          />
+        <Drawer.Screen
+          name="Home"
+          // @ts-ignore
+          component={TabNavigator}
+          options={{
+            drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
+          }}
+        />
       </Drawer.Navigator>
     </SafeAreaView>
   );
