@@ -9,7 +9,7 @@ import JobCard from '~/src/components/JobCard';
 
 const Home = ({ navigation }: any) => {
   return (
-    <ScrollView className="bg-white pt-[25]" contentContainerStyle={{ flexGrow: 1, rowGap: 58 }}>
+    <ScrollView className="bg-white pt-[25]" contentContainerStyle={{ flexGrow: 1, rowGap: 56 }}>
       <View className="gap-y-[24]">
         <View className="px-[25]">
           <MultiSearchBar />
