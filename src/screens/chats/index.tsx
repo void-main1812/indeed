@@ -16,24 +16,16 @@ export default function ChatNavigator() {
       initialRouteName="Inbox"
       backBehavior="history"
       screenOptions={{
-        tabBarLabelStyle: { fontSize: 12 },
+        tabBarLabelStyle: { fontSize: 16, textTransform: 'none' },
         tabBarItemStyle: { width: wp(33) },
-        tabBarIndicatorStyle: { backgroundColor: 'black' },
-        tabBarActiveTintColor: 'black',
+        tabBarIndicatorStyle: { backgroundColor: '#003A9B' },
+        tabBarActiveTintColor: '#003A9B',
+        tabBarStyle: {height: 50}
       }}>
       <Tab.Screen
         name="Inbox"
         component={Inbox}
         options={{
-          tabBarIcon(props) {
-            return (
-              <Ionicons
-                size={24}
-                name={props.focused ? 'chatbox-ellipses' : 'chatbox-ellipses-outline'}
-                color="black"
-              />
-            );
-          },
           tabBarItemStyle: {
             flexDirection: 'row',
             width: wp(33),
@@ -45,15 +37,8 @@ export default function ChatNavigator() {
         name="Archive"
         component={Archive}
         options={{
-          tabBarIcon(props) {
-            return (
-              <Ionicons
-                size={24}
-                name={props.focused ? 'archive' : 'archive-outline'}
-                color="black"
-              />
-            );
-          },
+          tabBarLabel: 'Archive',
+          tabBarShowLabel: true,
           tabBarItemStyle: {
             flexDirection: 'row',
             width: wp(33),
@@ -65,15 +50,6 @@ export default function ChatNavigator() {
         name="Spam"
         component={Spam}
         options={{
-          tabBarIcon(props) {
-            return (
-              <Ionicons
-                size={24}
-                name={props.focused ? 'alert-circle' : 'alert-circle-outline'}
-                color="black"
-              />
-            );
-          },
           tabBarItemStyle: {
             flexDirection: 'row',
             width: wp(33),
