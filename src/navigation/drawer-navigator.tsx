@@ -49,7 +49,7 @@ export default function DrawerNavigator() {
       <Drawer.Navigator
         screenOptions={{
           drawerPosition: 'right',
-          swipeEdgeWidth: 150,
+          swipeEdgeWidth: 100,
           swipeMinDistance: 50,
           header() {
             return <DrawerHeader />;
