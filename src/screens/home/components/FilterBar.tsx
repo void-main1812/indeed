@@ -8,7 +8,7 @@ const FilterBar = () => {
   return (
     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       <View className="flex-row items-center py-2 px-4 bg-neutral-100 border border-neutral-200 rounded-[8] gap-x-2 mr-6">
-        <Text className=" text-lg">FilterBar</Text>
+        <Text className=" text-lg">Filters</Text>
         <Ionicons name="chevron-down" />
       </View>
       {filters.map((item, index) => {
