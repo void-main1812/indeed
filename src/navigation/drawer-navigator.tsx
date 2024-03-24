@@ -45,7 +45,7 @@ const DrawerHeader = () => {
 
 export default function DrawerNavigator() {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
+    <SafeAreaView style={{ flex: 1 }}>
       <Drawer.Navigator
         screenOptions={{
           drawerPosition: 'right',
