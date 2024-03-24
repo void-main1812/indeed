@@ -8,7 +8,7 @@ import PrimaryButton from '~/src/components/PrimaryButton';
 const Welcome = ({ navigation }: any) => {
   return (
     <SafeAreaView>
-      <View className="w-full h-full justify-center items-center bg-white gap-[40] px-[25]">
+      <View className="w-full h-full justify-center items-center gap-[40] px-[25]">
         <View>
           <Image
             source={require('../../../assets/Welcome.png')}
