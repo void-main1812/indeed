@@ -10,7 +10,7 @@ type ChatCardProps = {
 
 const ChatCard = ({ company, logo, message }: ChatCardProps) => {
   return (
-    <View className="h-[80] px-[25] justify-start items-center flex-row gap-x-[16] border-b border-text-light/20">
+    <View className="h-[80] px-[25] justify-start items-center flex-row gap-x-[16] border-b border-text-light/10">
       <Image source={logo} style={{ height: 32, width: 32 }} contentFit="contain" />
       <View>
         <Text className="text-2xl font-semibold text-text">{company}</Text>
