@@ -59,11 +59,13 @@ export default function DrawerNavigator() {
           },
         }}>
         <Drawer.Screen
-          name="Home"
+          name="HomeNavigator"
           // @ts-ignore
           component={TabNavigator}
           options={{
             drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
+            drawerLabel: 'Home',
+            drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
           }}
         />
       </Drawer.Navigator>
