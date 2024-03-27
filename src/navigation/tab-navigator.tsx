@@ -24,7 +24,7 @@ export default function TabNavigator() {
         tabBarBackground: () => (
           <BlurView
             style={StyleSheet.absoluteFill}
-            intensity={60}
+            intensity={40}
             tint="light"
             experimentalBlurMethod="dimezisBlurView"/>
         ),
@@ -34,7 +34,7 @@ export default function TabNavigator() {
           paddingBottom: 10,
         },
         tabBarStyle: {
-          height: 80,
+          height: 90,
           position: 'absolute',
           backgroundColor: 'rgba(255, 255, 255, 0.5)',
           elevation: 0,
@@ -49,6 +49,11 @@ export default function TabNavigator() {
           bottom: 0,
           alignSelf: 'center',
         },
+        tabBarActiveBackgroundColor: "#fff",
+        tabBarItemStyle: {
+          margin: 10,
+          borderRadius: 20,
+        }
       }}>
       <Tab.Screen
         name="Home"
