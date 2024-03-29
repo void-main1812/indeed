@@ -1,8 +1,6 @@
-import { Ionicons } from '@expo/vector-icons';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { useNavigationState } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { wp } from '~/lib/utils/get_screen_dimensions';
 import Archive from './Archive';
 import Inbox from './Inbox';
