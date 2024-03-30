@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Settings = () => {
+const JobPreferances = () => {
   return (
     <View>
-      <Text>Settings</Text>
+      <Text>JobPreferances</Text>
     </View>
   )
 }
 
-export default Settings
+export default JobPreferances
