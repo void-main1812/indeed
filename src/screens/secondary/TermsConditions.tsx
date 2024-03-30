@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Settings = () => {
+const TermsConditions = () => {
   return (
     <View>
-      <Text>Settings</Text>
+      <Text>TermsConditions</Text>
     </View>
   )
 }
 
-export default Settings
+export default TermsConditions
