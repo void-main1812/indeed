@@ -20,6 +20,98 @@ import TermsConditions from '../screens/secondary/TermsConditions';
 import PrivacyPolicy from '../screens/secondary/PrivacyPolicy';
 import Settings from '../screens/secondary/Settings';
 
+type drawerScreenTypes = {
+  name: string;
+  component: React.ComponentType<any>;
+  drawerlabel: string;
+  activeicon: keyof (typeof Ionicons)['glyphMap'];
+  inActiveIcon: keyof (typeof Ionicons)['glyphMap'];
+  headershow: boolean;
+};
+
+const DrawerScreens: drawerScreenTypes[] = [
+  {
+    name: 'HomeNavigator',
+    component: TabNavigator,
+    drawerlabel: 'Home',
+    activeicon: 'home',
+    inActiveIcon: 'home-outline',
+    headershow: true,
+  },
+  {
+    name: 'Company Profile',
+    component: CompanyProfile,
+    drawerlabel: 'Company Profile',
+    activeicon: 'business',
+    inActiveIcon: 'business-outline',
+    headershow: false,
+  },
+  {
+    name: 'SalaryGuide',
+    component: SalaryGuide,
+    drawerlabel: 'Salary Guide',
+    activeicon: 'cash',
+    inActiveIcon: 'cash-outline',
+    headershow: false,
+  },
+  {
+    name: 'Job Preferances',
+    component: JobPreferances,
+    drawerlabel: 'Job Preferances',
+    activeicon: 'briefcase',
+    inActiveIcon: 'briefcase-outline',
+    headershow: false,
+  },
+  {
+    name: 'My Reviews',
+    component: MyReviews,
+    drawerlabel: 'My Reviews',
+    activeicon: 'star',
+    inActiveIcon: 'star-outline',
+    headershow: false,
+  },
+  {
+    name: 'Settings',
+    component: Settings,
+    drawerlabel: 'Settings',
+    activeicon: 'settings',
+    inActiveIcon: 'settings-outline',
+    headershow: false,
+  },
+  {
+    name: 'CustomerSupport',
+    component: CustomerSupport,
+    drawerlabel: 'Customer Support',
+    activeicon: 'headset',
+    inActiveIcon: 'headset-outline',
+    headershow: false,
+  },
+  {
+    name: 'My Jobs',
+    component: MyJobs,
+    drawerlabel: 'My Jobs',
+    activeicon: 'id-card',
+    inActiveIcon: 'id-card-outline',
+    headershow: false,
+  },
+  {
+    name: 'Terms and Conditions',
+    component: TermsConditions,
+    drawerlabel: 'Terms and Conditions',
+    activeicon: 'checkmark-circle',
+    inActiveIcon: 'checkmark-circle-outline',
+    headershow: false,
+  },
+  {
+    name: 'Privacy Policy',
+    component: PrivacyPolicy,
+    drawerlabel: 'Privacy Policy',
+    activeicon: 'lock-closed',
+    inActiveIcon: 'lock-closed-outline',
+    headershow: false,
+  },
+];
+
 type DrawerNavProp = DrawerNavigationProp<RootStackParamList, 'DrawerNavigator'>;
 
 const Drawer = createDrawerNavigator();
@@ -66,118 +158,45 @@ export default function DrawerNavigator() {
           },
           drawerStyle: {
             width: wp(100),
+            paddingHorizontal: 25,
+          },
+          drawerItemStyle: {
+            paddingVertical: 4,
+            borderBottomColor: '#e6e6e6',
+            borderBottomWidth: 1,
+          },
+          drawerLabelStyle: {
+            fontSize: 16,
+            fontWeight: '400'
           },
         }}>
-        <Drawer.Screen
-          name="HomeNavigator"
-          // @ts-ignore
-          component={TabNavigator}
-          options={{
-            drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
-            drawerLabel: 'Home',
-            drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
-          }}
-        />
-        <Drawer.Screen
-          name="Company Profile"
-          // @ts-ignore
-          component={CompanyProfile}
-          options={{
-            drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
-            drawerLabel: 'Company Profile',
-            drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
-          }}
-        />
-        <Drawer.Screen
-          name="SalaryGuide"
-          // @ts-ignore
-          component={SalaryGuide}
-          options={{
-            drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
-            drawerLabel: 'Salary Guide',
-            drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
-          }}
-        />
-        <Drawer.Screen
-          name="Job Preferances"
-          // @ts-ignore
-          component={JobPreferances}
-          options={{
-            drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
-            drawerLabel: 'Job Preferances',
-            drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
-          }}
-        />
-        <Drawer.Screen
-          name="My Reviews"
-          // @ts-ignore
-          component={MyReviews}
-          options={{
-            drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
-            drawerLabel: 'My Reviews',
-            drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
-          }}
-        />
-        <Drawer.Screen
-          name="Settings"
-          // @ts-ignore
-          component={Settings}
-          options={{
-            drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
-            drawerLabel: 'Settings',
-            drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
-          }}
-        />
-        <Drawer.Screen
-          name="CustomerSupport"
-          // @ts-ignore
-          component={CustomerSupport}
-          options={{
-            drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
-            drawerLabel: 'Customer Support',
-            drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
-          }}
-        />
-        <Drawer.Screen
-          name="My Jobs"
-          // @ts-ignore
-          component={MyJobs}
-          options={{
-            drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
-            drawerLabel: 'My Jobs',
-            drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
-          }}
-        />
-        <Drawer.Screen
-          name="Cookies"
-          // @ts-ignore
-          component={Cookies}
-          options={{
-            drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
-            drawerLabel: 'Cookies',
-            drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
-          }}
-        />
-        <Drawer.Screen
-          name="Terms and Conditions"
-          // @ts-ignore
-          component={TermsConditions}
-          options={{
-            drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
-            drawerLabel: 'Terms and Conditions',
-            drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
-          }}
-        />
-        <Drawer.Screen
-          name="Privacy Policy"
-          // @ts-ignore
-          component={PrivacyPolicy}
-          options={{
-            drawerIcon: ({ size, color }) => <Ionicons name="home" size={size} color={color} />,
-            drawerLabel: 'Privacy Policy',
-            drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
-          }}
-        />
+        {DrawerScreens.map((item, index) => {
+          return (
+            <Drawer.Screen
+              name={item.name}
+              key={index}
+              // @ts-ignore
+              component={item.component}
+              options={{
+                headerShown: item.headershow,
+                drawerIcon(props) {
+                  return (
+                    <Ionicons
+                      name={props.focused ? item.activeicon : item.inActiveIcon}
+                      size={24}
+                      color={props.color}
+                    />
+                  );
+                },
+                // drawerIcon: ({ size, color }) => (
+                //   <Ionicons name={item.activeicon} size={size} color={color} />
+                // ),
+                drawerLabel: item.drawerlabel,
+                drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
+              }}
+            />
+          );
+        })}
       </Drawer.Navigator>
     </SafeAreaView>
   );
