@@ -15,7 +15,6 @@ import JobPreferances from '../screens/secondary/JobPreferances';
 import MyReviews from '../screens/secondary/MyReviews';
 import CustomerSupport from '../screens/secondary/CustomerSupport';
 import MyJobs from '../screens/secondary/MyJobs';
-import Cookies from '../screens/secondary/Cookies';
 import TermsConditions from '../screens/secondary/TermsConditions';
 import PrivacyPolicy from '../screens/secondary/PrivacyPolicy';
 import Settings from '../screens/secondary/Settings';
@@ -192,7 +191,7 @@ export default function DrawerNavigator() {
                 //   <Ionicons name={item.activeicon} size={size} color={color} />
                 // ),
                 drawerLabel: item.drawerlabel,
-                drawerActiveBackgroundColor: 'rgba(0, 58, 155, 0.1)',
+                drawerActiveBackgroundColor: 'transparent',
               }}
             />
           );
