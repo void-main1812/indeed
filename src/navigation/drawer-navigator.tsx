@@ -2,9 +2,14 @@ import { Ionicons } from '@expo/vector-icons';
 import { DrawerNavigationProp, createDrawerNavigator } from '@react-navigation/drawer';
 import { Image } from 'expo-image';
 import React from 'react';
-import { Pressable, View } from 'react-native';
+import { Pressable, View, Text } from 'react-native';
 
-import { useNavigation } from '@react-navigation/native';
+import {
+  useNavigation,
+  useRoute,
+  getFocusedRouteNameFromRoute,
+  useNavigationState,
+} from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { wp } from '~/lib/utils/get_screen_dimensions';
 import { RootStackParamList } from '.';
@@ -43,15 +48,15 @@ const DrawerScreens: drawerScreenTypes[] = [
     drawerlabel: 'Company Profile',
     activeicon: 'business',
     inActiveIcon: 'business-outline',
-    headershow: false,
+    headershow: true,
   },
   {
-    name: 'SalaryGuide',
+    name: 'Salary Guide',
     component: SalaryGuide,
     drawerlabel: 'Salary Guide',
     activeicon: 'cash',
     inActiveIcon: 'cash-outline',
-    headershow: false,
+    headershow: true,
   },
   {
     name: 'Job Preferances',
@@ -59,7 +64,7 @@ const DrawerScreens: drawerScreenTypes[] = [
     drawerlabel: 'Job Preferances',
     activeicon: 'briefcase',
     inActiveIcon: 'briefcase-outline',
-    headershow: false,
+    headershow: true,
   },
   {
     name: 'My Reviews',
@@ -67,7 +72,7 @@ const DrawerScreens: drawerScreenTypes[] = [
     drawerlabel: 'My Reviews',
     activeicon: 'star',
     inActiveIcon: 'star-outline',
-    headershow: false,
+    headershow: true,
   },
   {
     name: 'Settings',
@@ -75,15 +80,15 @@ const DrawerScreens: drawerScreenTypes[] = [
     drawerlabel: 'Settings',
     activeicon: 'settings',
     inActiveIcon: 'settings-outline',
-    headershow: false,
+    headershow: true,
   },
   {
-    name: 'CustomerSupport',
+    name: 'Customer Support',
     component: CustomerSupport,
     drawerlabel: 'Customer Support',
     activeicon: 'headset',
     inActiveIcon: 'headset-outline',
-    headershow: false,
+    headershow: true,
   },
   {
     name: 'My Jobs',
@@ -91,7 +96,7 @@ const DrawerScreens: drawerScreenTypes[] = [
     drawerlabel: 'My Jobs',
     activeicon: 'id-card',
     inActiveIcon: 'id-card-outline',
-    headershow: false,
+    headershow: true,
   },
   {
     name: 'Terms and Conditions',
@@ -99,7 +104,7 @@ const DrawerScreens: drawerScreenTypes[] = [
     drawerlabel: 'Terms and Conditions',
     activeicon: 'checkmark-circle',
     inActiveIcon: 'checkmark-circle-outline',
-    headershow: false,
+    headershow: true,
   },
   {
     name: 'Privacy Policy',
@@ -107,7 +112,7 @@ const DrawerScreens: drawerScreenTypes[] = [
     drawerlabel: 'Privacy Policy',
     activeicon: 'lock-closed',
     inActiveIcon: 'lock-closed-outline',
-    headershow: false,
+    headershow: true,
   },
 ];
 
@@ -115,7 +120,7 @@ type DrawerNavProp = DrawerNavigationProp<RootStackParamList, 'DrawerNavigator'>
 
 const Drawer = createDrawerNavigator();
 
-const DrawerHeader = () => {
+const DrawerHeader = ({ routeName }: { routeName: string | undefined }) => {
   const navigation = useNavigation<DrawerNavProp>();
 
   return (
@@ -132,11 +137,18 @@ const DrawerHeader = () => {
         borderBottomWidth: 1,
         borderBottomColor: '#e6e6e6',
       }}>
-      <Image
-        source={require('../../assets/indeed_logo.png')}
-        style={{ height: 30, width: 120 }}
-        contentFit="contain"
-      />
+      {routeName == 'HomeNavigator' ? (
+        <Image
+          source={require('../../assets/indeed_logo.png')}
+          style={{ height: 30, width: 120 }}
+          contentFit="contain"
+        />
+      ) : (
+        <View>
+          <Text className="text-2xl font-semibold text-primary">{routeName}</Text>
+        </View>
+      )}
+
       <Pressable style={{ padding: 5 }} onPress={() => navigation.openDrawer()}>
         <Ionicons name="menu" size={24} />
       </Pressable>
@@ -145,6 +157,9 @@ const DrawerHeader = () => {
 };
 
 export default function DrawerNavigator() {
+  const route = useRoute();
+  const routename = getFocusedRouteNameFromRoute(route);
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Drawer.Navigator
@@ -153,7 +168,7 @@ export default function DrawerNavigator() {
           swipeEdgeWidth: 100,
           swipeMinDistance: 50,
           header() {
-            return <DrawerHeader />;
+            return <DrawerHeader routeName={routename} />;
           },
           drawerStyle: {
             width: wp(100),
@@ -166,7 +181,7 @@ export default function DrawerNavigator() {
           },
           drawerLabelStyle: {
             fontSize: 16,
-            fontWeight: '400'
+            fontWeight: '400',
           },
         }}>
         {DrawerScreens.map((item, index) => {
