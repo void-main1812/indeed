@@ -202,9 +202,6 @@ export default function DrawerNavigator() {
                     />
                   );
                 },
-                // drawerIcon: ({ size, color }) => (
-                //   <Ionicons name={item.activeicon} size={size} color={color} />
-                // ),
                 drawerLabel: item.drawerlabel,
                 drawerActiveBackgroundColor: 'transparent',
               }}
