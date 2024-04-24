@@ -123,6 +123,8 @@ const Drawer = createDrawerNavigator();
 const DrawerHeader = ({ routeName }: { routeName: string | undefined }) => {
   const navigation = useNavigation<DrawerNavProp>();
 
+  
+
   return (
     <View
       style={{
@@ -137,7 +139,7 @@ const DrawerHeader = ({ routeName }: { routeName: string | undefined }) => {
         borderBottomWidth: 1,
         borderBottomColor: '#e6e6e6',
       }}>
-      {routeName == 'HomeNavigator' ? (
+      {routeName === 'HomeNavigator' ? (
         <Image
           source={require('../../assets/indeed_logo.png')}
           style={{ height: 30, width: 120 }}

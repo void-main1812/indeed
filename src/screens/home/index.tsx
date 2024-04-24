@@ -6,8 +6,12 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Image } from 'expo-image';
 import { MockJobs } from '~/data/mockData';
 import JobCard from '~/src/components/JobCard';
+import { size } from '../../../lib/global';
+import { hp } from '~/lib/utils/get_screen_dimensions';
 
 const Home = ({ navigation }: any) => {
+  const { text } = size;
+
   return (
     <ScrollView className="bg-white pt-[25]" contentContainerStyle={{ flexGrow: 1, rowGap: 56 }}>
       <View className="gap-y-[24]">
@@ -18,16 +22,20 @@ const Home = ({ navigation }: any) => {
           <FilterBar />
         </View>
       </View>
-      <View className="px-[25] h-52 w-full">
+      <View className="px-[25] w-full" style={{height: hp(22.5)}} >
         <View className="h-full w-full rounded-[16] overflow-hidden shadow-2xl shadow-black">
           <LinearGradient
             className="h-full w-full p-[20] items-center flex-row justify-between gap-x-4"
             colors={['#054BC0', '#012C73']}>
             <View className="w-[50%] h-full gap-y-4">
               <View className="gap-y-2 justify-center h-full ">
-                <Text className="text-xl text-white">FIND YOUR</Text>
-                <Text className="text-4xl text-white font-semibold">DREAM JOB</Text>
-                <Text className="text-sm text-white font-light">
+                <Text className="text-white" style={{ fontSize: text.regular }}>
+                  FIND YOUR
+                </Text>
+                <Text className="text-white font-semibold" style={{ fontSize: text.lg }}>
+                  DREAM JOB
+                </Text>
+                <Text className="text-white font-light" style={{ fontSize: text.small }}>
                   Find out what do like doing the most and get someone pay you for doing it
                 </Text>
               </View>
@@ -44,8 +52,10 @@ const Home = ({ navigation }: any) => {
       </View>
       <View className="px-[25] gap-y-[24] pb-[150]">
         <View>
-          <Text className="text-3xl font-semibold text-text">Best Picks for You</Text>
-          <Text className="text-lg font-light text-text-light">
+          <Text className="font-semibold text-text" style={{ fontSize: size.text.lg }}>
+            Best Picks for You
+          </Text>
+          <Text className="font-light text-text-light" style={{ fontSize: size.text.body }}>
             Jobs based on your preference and activity on Indeed
           </Text>
         </View>
