@@ -4,12 +4,7 @@ import { Image } from 'expo-image';
 import React from 'react';
 import { Pressable, View, Text } from 'react-native';
 
-import {
-  useNavigation,
-  useRoute,
-  getFocusedRouteNameFromRoute,
-  useNavigationState,
-} from '@react-navigation/native';
+import { useNavigation, useRoute, getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { wp } from '~/lib/utils/get_screen_dimensions';
 import { RootStackParamList } from '.';
@@ -123,8 +118,6 @@ const Drawer = createDrawerNavigator();
 const DrawerHeader = ({ routeName }: { routeName: string | undefined }) => {
   const navigation = useNavigation<DrawerNavProp>();
 
-  
-
   return (
     <View
       style={{
@@ -139,16 +132,16 @@ const DrawerHeader = ({ routeName }: { routeName: string | undefined }) => {
         borderBottomWidth: 1,
         borderBottomColor: '#e6e6e6',
       }}>
-      {routeName === 'HomeNavigator' ? (
-        <Image
-          source={require('../../assets/indeed_logo.png')}
-          style={{ height: 30, width: 120 }}
-          contentFit="contain"
-        />
-      ) : (
+      {routeName !== 'HomeNavigator' ? (
         <View>
           <Text className="text-2xl font-semibold text-primary">{routeName}</Text>
         </View>
+      ) : (
+        <Image
+          source={require('../../assets/indeed_logo.png')}
+          style={{ height: 40, width: 80 }}
+          contentFit="contain"
+        />
       )}
 
       <Pressable style={{ padding: 5 }} onPress={() => navigation.openDrawer()}>
