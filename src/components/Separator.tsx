@@ -5,7 +5,7 @@ type SaperatorProps = {
   text?: string;
 };
 
-const Saperator = ({ text }: SaperatorProps) => {
+const Separator = ({ text }: SaperatorProps) => {
   return (
     <View className="w-full py-2 justify-center items-center relative">
       <View className="w-full h-[1px] bg-text-light/20" />
@@ -16,4 +16,4 @@ const Saperator = ({ text }: SaperatorProps) => {
   );
 };
 
-export default Saperator;
+export default Separator;

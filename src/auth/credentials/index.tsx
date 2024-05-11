@@ -5,7 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { hp } from '~/lib/utils/get_screen_dimensions';
 import Input from '~/src/components/Input';
 import PrimaryButton from '~/src/components/PrimaryButton';
-import Saperator from '~/src/components/Saperator';
+import Separator from '~/src/components/Separator';
 import SocialAuthButton from '~/src/components/SocialAuthButton';
 
 const Auth = ({ navigation }: any) => {
@@ -41,7 +41,7 @@ const Auth = ({ navigation }: any) => {
             <PrimaryButton onPress={() => navigation.replace('OnboardingNavigator')} text="Verify" />
           </View>
           <View className="w-full">
-            <Saperator text={'Or Continue with'} />
+            <Separator text={'Or Continue with'} />
           </View>
           <View className="flex flex-row w-full justify-between px-[25px]">
             <SocialAuthButton
