@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf55951b-b18a-48d8-85cb-28aa5b9725ee" name="Changes" comment="">
+    <list default="true" id="bf55951b-b18a-48d8-85cb-28aa5b9725ee" name="Changes" comment=":heavy_plus_sign: Add: Size variable for Height and width and colour variables">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/global.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/global.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/user/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/user/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/credentials/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/credentials/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/onboarding/UserInformation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/onboarding/UserInformation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/onboarding/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/onboarding/Welcome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JobCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JobCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PrimaryButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PrimaryButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Separator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Separator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SocialAuthButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SocialAuthButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/drawer-navigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/drawer-navigator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +39,16 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/void-main1812/indeed.git&quot;,
     &quot;accountId&quot;: &quot;ac75fd46-9862-4afd-912b-5defde7d4e1d&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;void-main1812&quot;,
+    &quot;repository&quot;: &quot;indeed&quot;
   }
 }</component>
   <component name="MarkdownSettingsMigration">
@@ -46,34 +63,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "development",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "D:\\indeed\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.sourceCode.JavaScript",
-    "ts.external.directory.path": "D:\\indeed\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\indeed\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JavaScript&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\indeed\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -94,10 +111,26 @@
       <workItem from="1715494490215" duration="2640000" />
       <workItem from="1715497256315" duration="206000" />
       <workItem from="1715497476537" duration="1624000" />
+      <workItem from="1715499652187" duration="523000" />
+      <workItem from="1715510791718" duration="3327000" />
+      <workItem from="1715527147017" duration="2141000" />
     </task>
+    <task id="LOCAL-00001" summary=":heavy_plus_sign: Add: Size variable for Height and width and colour variables">
+      <option name="closed" value="true" />
+      <created>1715500057680</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715500057680</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=":heavy_plus_sign: Add: Size variable for Height and width and colour variables" />
+    <option name="LAST_COMMIT_MESSAGE" value=":heavy_plus_sign: Add: Size variable for Height and width and colour variables" />
   </component>
 </project>

@@ -7,27 +7,34 @@ import Input from '~/src/components/Input';
 import PrimaryButton from '~/src/components/PrimaryButton';
 import Separator from '~/src/components/Separator';
 import SocialAuthButton from '~/src/components/SocialAuthButton';
+import { size } from '~/lib/global';
 
 const Auth = ({ navigation }: any) => {
   return (
     <ScrollView
       className="h-full w-full bg-white"
       contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}>
-      <View className="bg-white px-[25px] h-full w-full justify-center" style={{ gap: hp(4.8) }}>
+      <View
+        className="bg-white h-full w-full justify-center"
+        style={{ gap: size.height.sm, paddingHorizontal: hp(2.5) }}>
         <View className="flex items-center" style={{ gap: hp(0.8) }}>
           <Image
             source={require('../../../assets/indeed_logo.png')}
-            style={{ height: 40, width: 160 }}
+            style={{ height: 30, width: 120 }}
             contentFit="contain"
           />
-          <Text className=" text-lg text-primary">Get the Job you Deserve</Text>
+          <Text className="text-primary" style={{ fontSize: size.text.small }}>
+            Get the Job you Deserve
+          </Text>
         </View>
-        <View className="w-full flex items-start" style={{ gap: hp(4.8) }}>
+        <View className="w-full flex items-start" style={{ gap: size.height.regular }}>
           <View>
-            <Text className="text-4xl font-semibold">Welcome Back,</Text>
-            <Text className="text-sm">Verify yourself First</Text>
+            <Text className=" font-semibold" style={{ fontSize: size.text.lg }}>
+              Welcome Back,
+            </Text>
+            <Text style={{ fontSize: size.text.small }}>Verify yourself First</Text>
           </View>
-          <View className="w-full flex" style={{ gap: hp(1.6) }}>
+          <View className="w-full flex" style={{ gap: size.height.xxs }}>
             <Input
               label="Email-id/Phone no."
               placeholder='eg. "johndoe@host.provider"'
@@ -35,10 +42,16 @@ const Auth = ({ navigation }: any) => {
             />
             <Input label="Password" placeholder='eg. "lakjioe@#123"' onChangeText={() => {}} />
             <Pressable className="w-full items-end">
-              <Text className="underline p-[4] font-semibold text-lg">Forgot Password</Text>
+              <Text className="underline p-[4] font-semibold" style={{ fontSize: size.text.small }}>
+                Forgot Password
+              </Text>
             </Pressable>
 
-            <PrimaryButton onPress={() => navigation.replace('OnboardingNavigator')} text="Verify" />
+            <PrimaryButton
+              onPress={() => navigation.replace('OnboardingNavigator')}
+              text="Continue"
+              icon="arrow-forward"
+            />
           </View>
           <View className="w-full">
             <Separator text={'Or Continue with'} />
@@ -59,7 +72,9 @@ const Auth = ({ navigation }: any) => {
           </View>
         </View>
         <View className="w-full items-center">
-          <Text className="w-[82%] text-center font-normal text-text-light text-lg">
+          <Text
+            className="w-[82%] text-center font-normal text-text-light"
+            style={{ fontSize: size.text.small }}>
             By Continuing to the application you agree to our{' '}
             <Text className="font-semibold underline text-text-dark">Privacy Policy</Text>,{' '}
             <Text className="font-semibold underline text-text-dark">Terms & Conditions</Text>

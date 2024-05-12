@@ -1,6 +1,7 @@
 import { View, Text, TextInput } from 'react-native';
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
+import { size } from '~/lib/global';
 
 type InputProps = {
   placeholder: string;
@@ -30,17 +31,22 @@ const Input = ({
   return (
     <View className="flex">
       {label ? (
-        <Text className={`font-normal text-lg text-text mb-[8] ${labelClassName}`}>{label}</Text>
+        <Text
+          className={`font-normal text-text mb-[8] ${labelClassName}`}
+          style={{ fontSize: size.text.small }}>
+          {label}
+        </Text>
       ) : null}
       <View
-        className={`w-full flex-row justify-start items-center gap-x-[16] px-[16] h-[60px] bg-neutral-100 border border-neutral-300 rounded-[8] ${classname}`}>
+        className={`w-full flex-row justify-start items-center gap-x-[16] bg-neutral-100 border border-neutral-300 rounded-[8] ${classname}`}
+        style={{ height: size.height.xl, paddingHorizontal: size.height.xxs }}>
         {icon ? <Ionicons name={icon} size={16} color={iconColor ? iconColor : 'black'} /> : null}
         <TextInput
-          className={` w-full text-lg`}
+          className={`w-full`}
           placeholder={placeholder}
           onChangeText={onChangeText}
           placeholderTextColor="#A1A1AA"
-          style={style}
+          style={[style, { fontSize: size.text.small }]}
           keyboardType={keyboardType ? keyboardType : 'default'}
           secureTextEntry={secureTextEntry}
         />

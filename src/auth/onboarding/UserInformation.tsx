@@ -4,17 +4,25 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Input from '~/src/components/Input';
 import PrimaryButton from '~/src/components/PrimaryButton';
+import { size } from '~/lib/global';
+import { hp } from '~/lib/utils/get_screen_dimensions';
 
 const UserInformation = ({ navigation }: any) => {
   return (
     <SafeAreaView>
-      <View className="h-full w-full bg-white px-[25] pt-[25] gap-y-[32] items-center">
-        <View className="w-full gap-y-[16]">
-          <Text className="text-2xl font-normal">Let's Start with your</Text>
-          <Text className="text-6xl font-bold text-primary">Introduction</Text>
+      <View
+        className="h-full w-full bg-white items-center"
+        style={{ rowGap: size.height.regular, paddingHorizontal: hp(2.5), paddingTop: hp(2.5) }}>
+        <View className="w-full">
+          <Text className="font-normal" style={{ fontSize: size.text.regular }}>
+            Let's Start with your
+          </Text>
+          <Text className="font-bold text-primary" style={{ fontSize: size.text.xxl }}>
+            Introduction
+          </Text>
         </View>
         <ScrollView className="w-full" showsVerticalScrollIndicator={false}>
-          <View className="w-full gap-y-[16] pb-[120]">
+          <View className="w-full" style={{ paddingBottom: hp(12), rowGap: size.height.xxs }}>
             <Input label="First Name" placeholder="eg. John Doe" onChangeText={() => {}} />
             <Input label="Phone No." placeholder="eg. 98856 20225" onChangeText={() => {}} />
             <Input label="Your Country" placeholder="eg. India" onChangeText={() => {}} />
@@ -26,7 +34,7 @@ const UserInformation = ({ navigation }: any) => {
             />
           </View>
         </ScrollView>
-        <View className="w-full absolute bottom-[25]">
+        <View className="w-full absolute" style={{ bottom: hp(2.5) }}>
           <PrimaryButton
             text="Submit and continue"
             onPress={() => navigation.replace('DrawerNavigator')}

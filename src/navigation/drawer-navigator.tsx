@@ -156,7 +156,7 @@ export default function DrawerNavigator() {
   const routename = getFocusedRouteNameFromRoute(route);
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#003A9B' }}>
       <Drawer.Navigator
         screenOptions={{
           drawerPosition: 'right',
