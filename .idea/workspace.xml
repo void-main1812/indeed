@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf55951b-b18a-48d8-85cb-28aa5b9725ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lockb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/credentials/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/credentials/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/global.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/global.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ChatCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Saperator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Separator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/user/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/user/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,18 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "void-main1812"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;void-main1812&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/void-main1812/indeed.git",
-    "accountId": "ac75fd46-9862-4afd-912b-5defde7d4e1d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/void-main1812/indeed.git&quot;,
+    &quot;accountId&quot;: &quot;ac75fd46-9862-4afd-912b-5defde7d4e1d&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -64,13 +61,15 @@
     "git-widget-placeholder": "development",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.start.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "D:\\indeed\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.sourceCode.JavaScript",
     "ts.external.directory.path": "D:\\indeed\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -92,6 +91,9 @@
       <updated>1713857892735</updated>
       <workItem from="1715440495982" duration="1629000" />
       <workItem from="1715452652598" duration="2317000" />
+      <workItem from="1715494490215" duration="2640000" />
+      <workItem from="1715497256315" duration="206000" />
+      <workItem from="1715497476537" duration="1624000" />
     </task>
     <servers />
   </component>

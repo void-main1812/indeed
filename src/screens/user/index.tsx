@@ -29,12 +29,12 @@ const JobMatches = [
 
 const JobMatch = ({ title, description }: { title: string; description: string }) => {
   return (
-    <View className="w-full justify-between items-center flex-row mb-[16]">
+    <View className="w-full justify-between items-center flex-row mb-[24]">
       <View className="gap-y-1 w-[80%]">
         <Text className="font-medium text-text" style={{ fontSize: size.text.regular }}>
           {title}
         </Text>
-        <Text className="text-text-light font-light" style={{ fontSize: size.text.body }}>
+        <Text className="text-text-light font-light" style={{ fontSize: size.text.small }}>
           {description}
         </Text>
       </View>
@@ -52,7 +52,7 @@ const User = () => {
       contentContainerStyle={{ flexGrow: 1, rowGap: 40 }}>
       {/* SECTION Edit your Profile */}
       <View className="gap-y-[24]">
-        <Text className="font-medium text-text" style={{ fontSize: size.text.lg }}>
+        <Text className="font-bold text-text" style={{ fontSize: size.text.lg }}>
           Edit your Profile
         </Text>
         <View className="flex-row gap-x-[24] items-center">
@@ -77,7 +77,7 @@ const User = () => {
       <Separator />
       {/* SECTION Social Information */}
       <View className="gap-y-[24]">
-        <Text className="text-text font-medium" style={{ fontSize: size.text.lg }}>
+        <Text className="text-text font-bold" style={{ fontSize: size.text.lg }}>
           Social Information
         </Text>
         <View className="flex-row w-full justify-between items-center">
@@ -108,7 +108,7 @@ const User = () => {
       <Separator />
       {/* SECTION Resume Information */}
       <View className="gap-y-[24]">
-        <Text className="font-medium text-text" style={{ fontSize: size.text.lg }}>
+        <Text className="font-bold text-text" style={{ fontSize: size.text.lg }}>
           Resume
         </Text>
         <View className="flex-row justify-between items-center w-full">
@@ -122,7 +122,7 @@ const User = () => {
                 <Text className="font-medium text-text" style={{ fontSize: size.text.regular }}>
                   Resume.pdf
                 </Text>
-                <Text className="text-text-light font-light" style={{ fontSize: size.text.small }}>
+                <Text className="text-text-light font-light" style={{ fontSize: size.text.xsmall }}>
                   Last updated 2 days ago
                 </Text>
               </View>
@@ -139,10 +139,10 @@ const User = () => {
         </View>
       </View>
       <Separator />
-      {/* SECTION Other Preferances */}
-      <View className="gap-y-[48] pb-[120]">
-        <Text className="font-medium text-text" style={{ fontSize: size.text.lg }}>
-          Improve your Job Matches
+      {/* SECTION Other Preferences */}
+      <View className="gap-y-[20] pb-[120]">
+        <Text className="font-bold text-text" style={{ fontSize: size.text.lg }}>
+          Improve Job Matches
         </Text>
         <FlatList
           scrollEnabled={false}
