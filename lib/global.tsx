@@ -8,6 +8,7 @@ export const size = {
     regular: hp(2.4),
     lg: hp(3.2),
     xl: hp(4.0),
+    xxl: hp(4.8),
   },
   height: {
     xl: hp(6.4),
@@ -16,6 +17,7 @@ export const size = {
     md: hp(4.0),
     sm: hp(3.2),
     xs: hp(2.4),
+    xxs: hp(1.6),
   },
   width: {
     xsmall: wp(20),

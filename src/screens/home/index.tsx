@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Image } from 'expo-image';
 import { MockJobs } from '~/data/mockData';
 import JobCard from '~/src/components/JobCard';
-import { size } from '../../../lib/global';
+import { size } from '~/lib/global';
 import { hp } from '~/lib/utils/get_screen_dimensions';
 
 const Home = ({ navigation }: any) => {
@@ -22,17 +22,17 @@ const Home = ({ navigation }: any) => {
           <FilterBar />
         </View>
       </View>
-      <View className="px-[25] w-full" style={{height: hp(22.5)}} >
+      <View className="px-[25] w-full" style={{ height: hp(20) }}>
         <View className="h-full w-full rounded-[16] overflow-hidden shadow-2xl shadow-black">
           <LinearGradient
             className="h-full w-full p-[20] items-center flex-row justify-between gap-x-4"
             colors={['#054BC0', '#012C73']}>
-            <View className="w-[50%] h-full gap-y-4">
-              <View className="gap-y-2 justify-center h-full ">
-                <Text className="text-white" style={{ fontSize: text.regular }}>
+            <View className="w-[55%] h-full">
+              <View className="justify-center h-full ">
+                <Text className="text-white" style={{ fontSize: text.small }}>
                   FIND YOUR
                 </Text>
-                <Text className="text-white font-semibold" style={{ fontSize: text.lg }}>
+                <Text className="text-white font-semibold mb-4" style={{ fontSize: text.regular }}>
                   DREAM JOB
                 </Text>
                 <Text className="text-white font-light" style={{ fontSize: text.small }}>
@@ -40,10 +40,10 @@ const Home = ({ navigation }: any) => {
                 </Text>
               </View>
             </View>
-            <View className="w-full h-full">
+            <View className="w-full h-full items-center flex-row">
               <Image
                 source={require('../../../assets/illstrations/dreamJob.png')}
-                style={{ height: '100%', width: '50%' }}
+                style={{ height: '80%', width: '40%' }}
                 contentFit="contain"
               />
             </View>
@@ -52,10 +52,10 @@ const Home = ({ navigation }: any) => {
       </View>
       <View className="px-[25] gap-y-[24] pb-[150]">
         <View>
-          <Text className="font-semibold text-text" style={{ fontSize: size.text.lg }}>
+          <Text className="font-semibold text-text" style={{ fontSize: size.text.regular }}>
             Best Picks for You
           </Text>
-          <Text className="font-light text-text-light" style={{ fontSize: size.text.body }}>
+          <Text className="font-light text-text-light" style={{ fontSize: size.text.small }}>
             Jobs based on your preference and activity on Indeed
           </Text>
         </View>

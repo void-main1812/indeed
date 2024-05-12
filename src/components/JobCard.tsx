@@ -50,23 +50,23 @@ const JobCard = ({
       <View className="flex-row flex-wrap justify-start w-full gap-4 items-center">
         <Text
           className="font-base py-2 px-4 bg-emerald-100 text-emerald-700  rounded-[8]"
-          style={{ fontSize: text.body }}>
+          style={{ fontSize: text.small }}>
           ₹ {salary} / month
         </Text>
         <Text
           className="font-base py-2 px-4 bg-neutral-200 text-text  rounded-[8]"
-          style={{ fontSize: text.body }}>
+          style={{ fontSize: text.small }}>
           {time}
         </Text>
         <Text
           className="font-base py-2 px-4 bg-neutral-200 text-text  rounded-[8]"
-          style={{ fontSize: text.body }}>
+          style={{ fontSize: text.small }}>
           {shift}
         </Text>
         {instantApply ? (
           <Text
             className="font-base py-2 px-4 bg-sky-100 text-secondary  rounded-[8]"
-            style={{ fontSize: text.body }}>
+            style={{ fontSize: text.small }}>
             Instant Apply
           </Text>
         ) : null}

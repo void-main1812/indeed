@@ -1,37 +1,44 @@
 import { Image } from 'expo-image';
 import React from 'react';
-import { Text, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { wp } from '~/lib/utils/get_screen_dimensions';
+import { Pressable, Text, View } from 'react-native';
+import { hp } from '~/lib/utils/get_screen_dimensions';
 import PrimaryButton from '~/src/components/PrimaryButton';
+import { size } from '~/lib/global';
 
 const Welcome = ({ navigation }: any) => {
   return (
-    <SafeAreaView>
-      <View className="w-full h-full justify-center items-center gap-[40] px-[25]">
-        <View>
-          <Image
-            source={require('../../../assets/Welcome.png')}
-            style={{ height: wp(88), width: wp(88) }}
-          />
-        </View>
-        <View className="gap-[16] w-full">
-          <Text className="text-4xl font-semibold">Hey!</Text>
-          <Text className="text-6xl font-bold text-primary">Welcome Board,</Text>
-          <Text className="text-2xl text-text">
-            This is a Journey where you'll take the next major step to become successful person.
-            Your Dream job 😁
-          </Text>
-        </View>
-        <View className="w-full absolute bottom-[25]">
-          <PrimaryButton
-            onPress={() => navigation.navigate('UserInformation')}
-            text="Let's Get Started"
-            icon="arrow-forward"
-          />
-        </View>
+    <View
+      className="w-full h-full justify-center items-center"
+      style={{ gap: size.height.xs, paddingHorizontal: hp(2.5) }}>
+      <View>
+        <Image
+          source={require('../../../assets/Welcome.png')}
+          style={{ height: size.width.lg, width: size.width.lg }}
+        />
       </View>
-    </SafeAreaView>
+      <View className="w-full" style={{ gap: hp(0.8) }}>
+        <Text className="font-semibold" style={{ fontSize: size.text.regular }}>
+          Hey!
+        </Text>
+        <Text className="font-bold text-primary" style={{ fontSize: size.text.xl }}>
+          Welcome Board,
+        </Text>
+      </View>
+      <View className="w-full absolute" style={{ bottom: size.height.regular }}>
+        <PrimaryButton
+          onPress={() => navigation.navigate('UserInformation')}
+          text="Let's Get Started"
+          icon="arrow-forward"
+        />
+        <Pressable
+          className="w-full text-center justify-center items-center py-6"
+          onPress={() => navigation.replace('DrawerNavigator')}>
+          <Text style={{ fontSize: size.text.body }} className="text-primary font-medium">
+            Skip for Now
+          </Text>
+        </Pressable>
+      </View>
+    </View>
   );
 };
 
