@@ -6,7 +6,7 @@ import { Pressable, View, Text } from 'react-native';
 
 import { useNavigation, useRoute, getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { wp } from '~/lib/utils/get_screen_dimensions';
+import { hp, wp } from '~/lib/utils/get_screen_dimensions';
 import { RootStackParamList } from '.';
 import TabNavigator from './tab-navigator';
 import CompanyProfile from '../screens/secondary/CompanyProfile';
@@ -18,6 +18,7 @@ import MyJobs from '../screens/secondary/MyJobs';
 import TermsConditions from '../screens/secondary/TermsConditions';
 import PrivacyPolicy from '../screens/secondary/PrivacyPolicy';
 import Settings from '../screens/secondary/Settings';
+import { size } from '~/lib/global';
 
 type drawerScreenTypes = {
   name: string;
@@ -115,6 +116,7 @@ type DrawerNavProp = DrawerNavigationProp<RootStackParamList, 'DrawerNavigator'>
 
 const Drawer = createDrawerNavigator();
 
+// *Header for screens in the drawer navigator
 const DrawerHeader = ({ routeName }: { routeName: string | undefined }) => {
   const navigation = useNavigation<DrawerNavProp>();
 
@@ -132,21 +134,33 @@ const DrawerHeader = ({ routeName }: { routeName: string | undefined }) => {
         borderBottomWidth: 1,
         borderBottomColor: '#e6e6e6',
       }}>
-      {routeName !== 'HomeNavigator' ? (
-        <View>
-          <Text className="text-2xl font-semibold text-primary">{routeName}</Text>
-        </View>
-      ) : (
+      {routeName === 'HomeNavigator' ? (
         <Image
           source={require('../../assets/indeed_logo.png')}
           style={{ height: 40, width: 80 }}
           contentFit="contain"
         />
+      ) : (
+        <View>
+          <Text className="text-2xl font-semibold text-primary">{routeName}</Text>
+        </View>
       )}
 
       <Pressable style={{ padding: 5 }} onPress={() => navigation.openDrawer()}>
         <Ionicons name="menu" size={24} />
       </Pressable>
+    </View>
+  );
+};
+
+// * Footer for the drawer navigator
+
+const DrawerFooter = () => {
+  return (
+    <View
+      className="w-full py-4 flex-row justify-center items-center gap-x-4 "
+      style={{ paddingHorizontal: hp(1.6), paddingVertical: hp(2.5) }}>
+      <Text>Footer</Text>
     </View>
   );
 };
@@ -163,20 +177,18 @@ export default function DrawerNavigator() {
           swipeEdgeWidth: 100,
           swipeMinDistance: 50,
           header() {
-            return <DrawerHeader routeName={routename} />;
+            return <DrawerHeader routeName={routename ? routename : 'HomeNavigator'} />;
           },
           drawerStyle: {
             width: wp(100),
-            paddingHorizontal: 25,
+            paddingHorizontal: hp(2.5),
           },
           drawerItemStyle: {
             paddingVertical: 4,
-            borderBottomColor: '#e6e6e6',
-            borderBottomWidth: 1,
           },
           drawerLabelStyle: {
-            fontSize: 16,
-            fontWeight: '400',
+            fontSize: hp(1.8),
+            fontWeight: '500',
           },
         }}>
         {DrawerScreens.map((item, index) => {

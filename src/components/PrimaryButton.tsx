@@ -14,14 +14,14 @@ const PrimaryButton = ({ onPress, text, icon }: PrimaryButtonProps) => {
   return (
     <Pressable
       onPress={onPress}
-      className="w-full bg-[#003A9B] justify-center items-center rounded-[16] overflow-hidden relative z-10"
+      className="w-full justify-center items-center rounded-[8] overflow-hidden relative z-10"
       style={{ elevation: 20, shadowColor: 'black', height: size.height.xl }}>
       <Image
         source={require('../../assets/Primary_Button.png')}
         style={{ height: '100%', width: '100%', position: 'absolute', borderRadius: 8 }}
       />
       <View className="flex-row gap-x-2 items-center">
-        <Text className="text-white font-normal" style={{ fontSize: size.text.regular }}>
+        <Text className="text-white font-normal" style={{ fontSize: size.text.body }}>
           {text}
         </Text>
         {icon ? <Ionicons name={icon} size={20} color={'white'} /> : null}

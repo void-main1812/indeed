@@ -14,6 +14,7 @@ type InputProps = {
   label?: string;
   icon?: keyof typeof Ionicons.glyphMap;
   iconColor?: string;
+  placeholderTextColor?: string;
 };
 
 const Input = ({
@@ -27,6 +28,7 @@ const Input = ({
   label,
   icon,
   iconColor,
+  placeholderTextColor,
 }: InputProps) => {
   return (
     <View className="flex">
@@ -38,14 +40,14 @@ const Input = ({
         </Text>
       ) : null}
       <View
-        className={`w-full flex-row justify-start items-center gap-x-[16] bg-neutral-100 border border-neutral-300 rounded-[8] ${classname}`}
+        className={`w-full flex-row justify-start items-center gap-x-[16] bg-gray-50 border border-gray-200 rounded-[8] ${classname}`}
         style={{ height: size.height.xl, paddingHorizontal: size.height.xxs }}>
         {icon ? <Ionicons name={icon} size={16} color={iconColor ? iconColor : 'black'} /> : null}
         <TextInput
           className={`w-full`}
           placeholder={placeholder}
           onChangeText={onChangeText}
-          placeholderTextColor="#A1A1AA"
+          placeholderTextColor={placeholderTextColor ? placeholderTextColor : '#A1A1AA'}
           style={[style, { fontSize: size.text.small }]}
           keyboardType={keyboardType ? keyboardType : 'default'}
           secureTextEntry={secureTextEntry}

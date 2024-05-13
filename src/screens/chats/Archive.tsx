@@ -1,14 +1,24 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from 'react-native';
+import React from 'react';
 import { Image } from 'expo-image';
+import { size } from '~/lib/global';
+import { hp } from '~/lib/utils/get_screen_dimensions';
 
 const Archive = () => {
   return (
     <View className="h-full w-full bg-white items-center justify-center">
-      <Image source={require('../../../assets/illstrations/archive.png')} style={{ height: 120, width: 120 }} contentFit="contain" />
-      <Text className='text-3xl w-[50%] text-center text-text-light/50 font-medium mt-[16]' >No Archived Messages</Text>
+      <Image
+        source={require('../../../assets/illstrations/archive.png')}
+        style={{ height: hp(12), width: hp(12) }}
+        contentFit="contain"
+      />
+      <Text
+        className="text-center text-text-light/50 font-medium mt-[16]"
+        style={{ fontSize: size.text.regular }}>
+        No Archived{'\n'}Messages
+      </Text>
     </View>
   );
-}
+};
 
-export default Archive
+export default Archive;
