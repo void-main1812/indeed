@@ -10,8 +10,15 @@ import User from '../screens/user';
 
 const Tab = createBottomTabNavigator();
 
-function TabBarIcon(props: { name: React.ComponentProps<typeof Ionicons>['name']; color: string }) {
-  return <Ionicons size={28} style={styles.tabBarIcon} {...props} />;
+function TabBarIcon(props: { name: React.ComponentProps<typeof Ionicons>['name']; focused: any }) {
+  return (
+    <Ionicons
+      size={28}
+      style={styles.tabBarIcon}
+      color={`${props.focused ? '#003A9B' : '#454962'}`}
+      {...props}
+    />
+  );
 }
 
 export default function TabNavigator() {
@@ -19,12 +26,12 @@ export default function TabNavigator() {
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: '#003A9B',
-        tabBarInactiveTintColor: '#71819C',
+        tabBarInactiveTintColor: '#454962',
         headerShown: false,
         tabBarBackground: () => (
           <BlurView
             style={StyleSheet.absoluteFill}
-            intensity={40}
+            intensity={65}
             tint="light"
             experimentalBlurMethod="dimezisBlurView"
           />
@@ -32,15 +39,14 @@ export default function TabNavigator() {
         tabBarLabelStyle: {
           fontSize: 12,
           fontWeight: '600',
-          paddingBottom: 10,
+          paddingBottom: 6,
         },
         tabBarStyle: {
           height: 90,
           position: 'absolute',
-          backgroundColor: 'rgba(255, 255, 255, 0.5)',
           elevation: 0,
           borderTopWidth: 2,
-          borderTopColor: 'rgba(0, 0, 0, 0.05)',
+          borderTopColor: 'rgba(25, 25, 25, 0.05)',
         },
         tabBarIconStyle: {
           position: 'absolute',
@@ -50,7 +56,6 @@ export default function TabNavigator() {
           bottom: 0,
           alignSelf: 'center',
         },
-        tabBarActiveBackgroundColor: '#fff',
         tabBarItemStyle: {
           margin: 10,
           borderRadius: 20,
@@ -63,7 +68,7 @@ export default function TabNavigator() {
           tabBarIcon: (props) => (
             <TabBarIcon
               name={`${props.focused ? 'home' : 'home-outline'}`}
-              color={`${props.focused ? '#003A9B' : '#71819C'}`}
+              focused={props.focused}
             />
           ),
         }}
@@ -75,7 +80,7 @@ export default function TabNavigator() {
           tabBarIcon: (props) => (
             <TabBarIcon
               name={`${props.focused ? 'chatbox' : 'chatbox-outline'}`}
-              color={`${props.focused ? '#003A9B' : '#71819C'}`}
+              focused={props.focused}
             />
           ),
         }}
@@ -87,7 +92,7 @@ export default function TabNavigator() {
           tabBarIcon: (props) => (
             <TabBarIcon
               name={`${props.focused ? 'person' : 'person-outline'}`}
-              color={`${props.focused ? '#003A9B' : '#71819C'}`}
+              focused={props.focused}
             />
           ),
         }}
@@ -99,7 +104,7 @@ export default function TabNavigator() {
           tabBarIcon: (props) => (
             <TabBarIcon
               name={`${props.focused ? 'notifications' : 'notifications-outline'}`}
-              color={`${props.focused ? '#003A9B' : '#71819C'}`}
+              focused={props.focused}
             />
           ),
         }}

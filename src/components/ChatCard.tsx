@@ -15,11 +15,11 @@ const ChatCard = ({ company, logo, message }: ChatCardProps) => {
     <View className="h-[80] px-[25] justify-start items-center flex-row gap-x-[16] border-b border-text-light/10">
       <Image source={logo} style={{ height: 32, width: 32 }} contentFit="contain" />
       <View>
-        <Text className="font-semibold text-text" style={{ fontSize: size.text.body }}>
+        <Text className="font-normal text-text" style={{ fontSize: size.text.body }}>
           {company}
         </Text>
         <Text
-          className="text-text-light/80"
+          className="text-text-light/80 font-light"
           numberOfLines={1}
           style={{ fontSize: size.text.small, width: wp(75) }}>
           {message}
