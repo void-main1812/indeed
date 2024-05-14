@@ -30,7 +30,9 @@ export const size = {
 };
 
 export const color = {
-  Primary: '#003A9B',
-  Secondary: '#001C40',
-  white: '#ffffff',
+  primary: '#003A9B',
+  secondary: '#001C40',
+  text: '#272829',
+  text_light: '#61677A',
+  text_dark: '#000000',
 };

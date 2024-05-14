@@ -29,44 +29,44 @@ const JobCard = ({
   const { text } = size;
 
   return (
-    <View className="p-6 mb-4 w-full bg-neutral-50 rounded-[16] border border-neutral-200 gap-y-6">
+    <View className="p-6 mb-4 w-full bg-neutral-50 rounded-[16] border border-neutral-200 gap-y-4">
       <View className="flex-row gap-x-4 items-center">
         <Image source={logo} style={{ height: hp(4), width: hp(4) }} contentFit="contain" />
         <View>
           <Text className="font-semibold" style={{ fontSize: text.regular }}>
             {name}
           </Text>
-          <Text className="font-light" style={{ fontSize: text.small }}>
+          <Text className="font-light" style={{ fontSize: text.xsmall }}>
             {company}
           </Text>
         </View>
       </View>
       <View className="flex-row items-center gap-x-2">
         <Ionicons name="location" size={16} color="#003A9B" />
-        <Text className="font-base text-text-light" style={{ fontSize: text.body }}>
+        <Text className="font-base text-text-light" style={{ fontSize: text.small }}>
           {location}
         </Text>
       </View>
       <View className="flex-row flex-wrap justify-start w-full gap-4 items-center">
         <Text
           className="font-base py-2 px-4 bg-emerald-100 text-emerald-700  rounded-[8]"
-          style={{ fontSize: text.small }}>
+          style={{ fontSize: text.xsmall }}>
           ₹ {salary} / month
         </Text>
         <Text
           className="font-base py-2 px-4 bg-neutral-200 text-text  rounded-[8]"
-          style={{ fontSize: text.small }}>
+          style={{ fontSize: text.xsmall }}>
           {time}
         </Text>
         <Text
           className="font-base py-2 px-4 bg-neutral-200 text-text  rounded-[8]"
-          style={{ fontSize: text.small }}>
+          style={{ fontSize: text.xsmall }}>
           {shift}
         </Text>
         {instantApply ? (
           <Text
             className="font-base py-2 px-4 bg-sky-100 text-secondary  rounded-[8]"
-            style={{ fontSize: text.small }}>
+            style={{ fontSize: text.xsmall }}>
             Instant Apply
           </Text>
         ) : null}

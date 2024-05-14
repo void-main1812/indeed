@@ -10,8 +10,6 @@ import { size } from '~/lib/global';
 import { hp } from '~/lib/utils/get_screen_dimensions';
 
 const Home = ({ navigation }: any) => {
-  const { text, width, height } = size;
-
   return (
     <ScrollView className="bg-white pt-[25]" contentContainerStyle={{ flexGrow: 1, rowGap: 56 }}>
       <View className="gap-y-[24]">
@@ -22,29 +20,31 @@ const Home = ({ navigation }: any) => {
           <FilterBar />
         </View>
       </View>
-      <View className="w-full" style={{ height: hp(20), paddingHorizontal: hp(2.5) }}>
-        <View className="h-full w-full rounded-[16] overflow-hidden shadow-2xl shadow-black">
+      <View className="w-full" style={{ height: hp(16), paddingHorizontal: hp(2.5) }}>
+        <View className="h-full w-full rounded-[16] overflow-hidden" style={{ elevation: 40 }}>
           <LinearGradient
             className="h-full w-full items-center flex-row justify-between"
             colors={['#054BC0', '#012C73']}
-            style={{ padding: height.xs }}>
+            style={{ padding: size.height.xs }}>
             <View className="justify-center h-full">
-              <Text className="text-white" style={{ fontSize: text.small }}>
+              <Text className="text-white" style={{ fontSize: size.text.small }}>
                 FIND YOUR
               </Text>
-              <Text className="text-white font-semibold mb-4" style={{ fontSize: text.regular }}>
+              <Text
+                className="text-white font-semibold mb-4"
+                style={{ fontSize: size.text.regular }}>
                 DREAM JOB
               </Text>
               <Text
                 className="text-white font-light"
-                style={{ fontSize: text.small, width: width.small }}>
+                style={{ fontSize: size.text.xsmall, width: size.width.small }}>
                 Find out what do like doing the most and get someone pay you for doing it
               </Text>
             </View>
             <View className="h-full items-center flex-row">
               <Image
                 source={require('../../../assets/illstrations/dreamJob.png')}
-                style={{ height: '70%', width: width.small }}
+                style={{ height: '90%', width: size.width.regular }}
                 contentFit="contain"
               />
             </View>

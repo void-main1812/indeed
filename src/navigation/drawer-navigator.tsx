@@ -1,10 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
-import { DrawerNavigationProp, createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerNavigationProp } from '@react-navigation/drawer';
 import { Image } from 'expo-image';
 import React from 'react';
-import { Pressable, View, Text } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 
-import { useNavigation, useRoute, getFocusedRouteNameFromRoute } from '@react-navigation/native';
+import { getFocusedRouteNameFromRoute, useNavigation, useRoute } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { hp, wp } from '~/lib/utils/get_screen_dimensions';
 import { RootStackParamList } from '.';
@@ -18,7 +18,7 @@ import MyJobs from '../screens/secondary/MyJobs';
 import TermsConditions from '../screens/secondary/TermsConditions';
 import PrivacyPolicy from '../screens/secondary/PrivacyPolicy';
 import Settings from '../screens/secondary/Settings';
-import { size } from '~/lib/global';
+import { color } from '~/lib/global';
 
 type drawerScreenTypes = {
   name: string;
@@ -29,6 +29,7 @@ type drawerScreenTypes = {
   headershow: boolean;
 };
 
+// * Drawer Screens to be displayed in the drawer navigator
 const DrawerScreens: drawerScreenTypes[] = [
   {
     name: 'HomeNavigator',
@@ -116,6 +117,19 @@ type DrawerNavProp = DrawerNavigationProp<RootStackParamList, 'DrawerNavigator'>
 
 const Drawer = createDrawerNavigator();
 
+// * Custom Drawer Items to be rendered with the footer
+
+const DrawerItems = () => {
+  return (
+    <View style={{ flex: 1 }} className="h-full">
+      <View className="absolute flex-row gap-x-4 bottom-0 right-0 w-full py-4 border-t border-gray-300">
+        <Ionicons name={'log-out'} size={24} />
+        <Text>Log Out</Text>
+      </View>
+    </View>
+  );
+};
+
 // *Header for screens in the drawer navigator
 const DrawerHeader = ({ routeName }: { routeName: string | undefined }) => {
   const navigation = useNavigation<DrawerNavProp>();
@@ -153,24 +167,12 @@ const DrawerHeader = ({ routeName }: { routeName: string | undefined }) => {
   );
 };
 
-// * Footer for the drawer navigator
-
-const DrawerFooter = () => {
-  return (
-    <View
-      className="w-full py-4 flex-row justify-center items-center gap-x-4 "
-      style={{ paddingHorizontal: hp(1.6), paddingVertical: hp(2.5) }}>
-      <Text>Footer</Text>
-    </View>
-  );
-};
-
 export default function DrawerNavigator() {
   const route = useRoute();
   const routename = getFocusedRouteNameFromRoute(route);
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#003A9B' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: color.primary }}>
       <Drawer.Navigator
         screenOptions={{
           drawerPosition: 'right',
@@ -181,14 +183,15 @@ export default function DrawerNavigator() {
           },
           drawerStyle: {
             width: wp(100),
-            paddingHorizontal: hp(2.5),
+            paddingHorizontal: hp(1.2),
           },
           drawerItemStyle: {
             paddingVertical: 4,
+            paddingHorizontal: 10,
           },
           drawerLabelStyle: {
             fontSize: hp(1.8),
-            fontWeight: '500',
+            fontWeight: '400',
           },
         }}>
         {DrawerScreens.map((item, index) => {
@@ -210,7 +213,7 @@ export default function DrawerNavigator() {
                   );
                 },
                 drawerLabel: item.drawerlabel,
-                drawerActiveBackgroundColor: 'transparent',
+                drawerActiveBackgroundColor: color.primary[200],
               }}
             />
           );

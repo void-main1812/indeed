@@ -1,7 +1,8 @@
-import { View, Text, TextInput } from 'react-native';
+import { Text, TextInput, View } from 'react-native';
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { size } from '~/lib/global';
+import colors from 'tailwindcss/colors';
 
 type InputProps = {
   placeholder: string;
@@ -42,12 +43,14 @@ const Input = ({
       <View
         className={`w-full flex-row justify-start items-center gap-x-[16] bg-gray-50 border border-gray-200 rounded-[8] ${classname}`}
         style={{ height: size.height.xl, paddingHorizontal: size.height.xxs }}>
-        {icon ? <Ionicons name={icon} size={16} color={iconColor ? iconColor : 'black'} /> : null}
+        {icon ? (
+          <Ionicons name={icon} size={16} color={iconColor ? iconColor : colors.gray[400]} />
+        ) : null}
         <TextInput
           className={`w-full`}
           placeholder={placeholder}
           onChangeText={onChangeText}
-          placeholderTextColor={placeholderTextColor ? placeholderTextColor : '#A1A1AA'}
+          placeholderTextColor={placeholderTextColor ? placeholderTextColor : colors.gray[400]}
           style={[style, { fontSize: size.text.small }]}
           keyboardType={keyboardType ? keyboardType : 'default'}
           secureTextEntry={secureTextEntry}
