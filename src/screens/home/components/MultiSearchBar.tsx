@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import Input from '~/src/components/Input';
+import { color } from '~/lib/global';
 
 const MultiSearchBar = () => {
   return (
@@ -8,16 +9,16 @@ const MultiSearchBar = () => {
       <Input
         placeholder="Search Jobs, keywords or company"
         onChangeText={() => {}}
-        classname="rounded-b-none border-b-0 border-gray-400 "
+        classname="rounded-b-none"
         icon="search"
       />
       <Input
         placeholder="Search City, State or Remote"
         onChangeText={() => {}}
-        classname="rounded-t-none bg-primary/10 border-primary/50"
+        classname="rounded-t-none bg-primary/10 border-transparent"
         icon="location"
-        iconColor="#003A9B"
-        placeholderTextColor={'#003A9B'}
+        iconColor={color.primary}
+        placeholderTextColor={color.primary}
       />
     </View>
   );

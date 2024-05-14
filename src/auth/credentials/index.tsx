@@ -87,7 +87,7 @@ const Auth = ({ navigation }: any) => {
               className="w-[82%] text-center font-normal text-text-light"
               style={{ fontSize: size.text.small }}>
               By Continuing to the application you agree to our{' '}
-              <Text className="font-semibold underline text-text-dark">Privacy Policy</Text>,{' '}
+              <Text className="font-semibold underline text-text-light">Privacy Policy</Text>,{' '}
               <Text className="font-semibold underline text-text-dark">Terms & Conditions</Text>
             </Text>
           </View>
