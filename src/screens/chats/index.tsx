@@ -18,7 +18,7 @@ export default function ChatNavigator() {
         tabBarItemStyle: { width: wp(33) },
         tabBarIndicatorStyle: { backgroundColor: '#003A9B' },
         tabBarActiveTintColor: '#003A9B',
-        tabBarStyle: {height: 50}
+        tabBarStyle: { height: 50, elevation: 30 },
       }}>
       <Tab.Screen
         name="Inbox"

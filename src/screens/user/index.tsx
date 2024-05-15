@@ -6,7 +6,7 @@ import { hp } from '~/lib/utils/get_screen_dimensions';
 import { Image } from 'expo-image';
 import Separator from '~/src/components/Separator';
 import { Ionicons } from '@expo/vector-icons';
-import { size } from '~/lib/global';
+import { color, size } from '~/lib/global';
 
 const JobMatches = [
   {
@@ -39,7 +39,7 @@ const JobMatch = ({ title, description }: { title: string; description: string }
         </Text>
       </View>
       <Pressable>
-        <Ionicons name="chevron-forward-outline" size={24} color="black" />
+        <Ionicons name="chevron-forward-outline" size={24} color={color.text} />
       </Pressable>
     </View>
   );

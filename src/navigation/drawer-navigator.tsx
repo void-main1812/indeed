@@ -12,7 +12,7 @@ import TabNavigator from './tab-navigator';
 import CompanyProfile from '../screens/secondary/CompanyProfile';
 import SalaryGuide from '../screens/secondary/SalaryGuide';
 import JobPreferances from '../screens/secondary/JobPreferances';
-import MyReviews from '../screens/secondary/MyReviews';
+import ReviewHome from '../screens/secondary/Reviews';
 import CustomerSupport from '../screens/secondary/CustomerSupport';
 import MyJobs from '../screens/secondary/MyJobs';
 import TermsConditions from '../screens/secondary/TermsConditions';
@@ -65,7 +65,7 @@ const DrawerScreens: drawerScreenTypes[] = [
   },
   {
     name: 'My Reviews',
-    component: MyReviews,
+    component: ReviewHome,
     drawerlabel: 'My Reviews',
     activeicon: 'star',
     inActiveIcon: 'star-outline',
