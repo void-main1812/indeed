@@ -19,6 +19,7 @@ import TermsConditions from '../screens/secondary/TermsConditions';
 import PrivacyPolicy from '../screens/secondary/PrivacyPolicy';
 import Settings from '../screens/secondary/Settings';
 import { color } from '~/lib/global';
+import { StatusBar } from 'expo-status-bar';
 
 type drawerScreenTypes = {
   name: string;
@@ -173,6 +174,7 @@ export default function DrawerNavigator() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: color.primary }}>
+      <StatusBar backgroundColor={color.primary} style={'light'} />
       <Drawer.Navigator
         screenOptions={{
           drawerPosition: 'right',

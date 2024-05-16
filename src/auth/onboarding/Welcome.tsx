@@ -9,7 +9,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 const Welcome = ({ navigation }: any) => {
   return (
     <View
-      className="w-full h-full justify-center items-center"
+      className="w-full h-full justify-center items-center bg-white "
       style={{ gap: size.height.md, paddingHorizontal: hp(2.5) }}>
       <View className="flex items-center" style={{ gap: hp(0.8) }}>
         <Image
