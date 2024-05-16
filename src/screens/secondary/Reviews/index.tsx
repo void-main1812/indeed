@@ -27,7 +27,6 @@ const ReviewHome = () => {
         backBehavior="history"
         screenOptions={{
           tabBarLabelStyle: { fontSize: size.text.small, textTransform: 'none' },
-          tabBarItemStyle: { width: wp(50) },
           tabBarIndicatorStyle: { backgroundColor: '#003A9B' },
           tabBarActiveTintColor: '#003A9B',
           tabBarStyle: { height: 60, elevation: 20, shadowColor: color.text_light },
