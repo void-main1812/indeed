@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf55951b-b18a-48d8-85cb-28aa5b9725ee" name="Changes" comment=":sparkles: Feat: Your Reviews Screen">
+    <list default="true" id="bf55951b-b18a-48d8-85cb-28aa5b9725ee" name="Changes" comment=":sparkles: Feat: Settings Screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lockb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/onboarding/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/onboarding/Welcome.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigation/drawer-navigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/drawer-navigator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/secondary/Reviews/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/secondary/Reviews/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/secondary/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/secondary/settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/secondary/JobPreferances.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/secondary/JobPreferances.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +130,8 @@
       <workItem from="1715785448078" duration="349000" />
       <workItem from="1715786294306" duration="2830000" />
       <workItem from="1715795046840" duration="4766000" />
-      <workItem from="1715835526699" duration="839000" />
+      <workItem from="1715835526699" duration="3147000" />
+      <workItem from="1715849072582" duration="560000" />
     </task>
     <task id="LOCAL-00001" summary=":heavy_plus_sign: Add: Size variable for Height and width and colour variables">
       <option name="closed" value="true" />
@@ -177,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715754172191</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=":sparkles: Feat: Settings Screen">
+      <option name="closed" value="true" />
+      <created>1715836645908</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715836645908</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +204,7 @@
     <MESSAGE value=":bug: Fixed: Header logo not getting rendered" />
     <MESSAGE value=":lipstick: ♻️ Refactor: update styles and colour variables" />
     <MESSAGE value=":sparkles: Feat: Your Reviews Screen" />
-    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: Feat: Your Reviews Screen" />
+    <MESSAGE value=":sparkles: Feat: Settings Screen" />
+    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: Feat: Settings Screen" />
   </component>
 </project>
