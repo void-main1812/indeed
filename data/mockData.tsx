@@ -77,6 +77,52 @@ export const MockJobs = [
   },
 ];
 
+export const MockCompanies = [
+  {
+    id: 1,
+    company: 'Coca-Cola',
+    stars: '4.5',
+    logo: 'https://logo.clearbit.com/cocacola.com',
+  },
+  //   create 5 similar entries as above
+  {
+    id: 2,
+    company: 'Google',
+    stars: '4.8',
+    logo: 'https://logo.clearbit.com/google.com',
+  },
+  {
+    id: 3,
+    company: 'Microsoft',
+    stars: '4.7',
+    logo: 'https://logo.clearbit.com/microsoft.com',
+  },
+  {
+    id: 4,
+    company: 'Amazon',
+    stars: '4.6',
+    logo: 'https://logo.clearbit.com/amazon.com',
+  },
+  {
+    id: 5,
+    company: 'Apple',
+    stars: '4.9',
+    logo: 'https://logo.clearbit.com/apple.com',
+  },
+  {
+    id: 6,
+    company: 'Salesforce',
+    stars: '4.7',
+    logo: 'https://logo.clearbit.com/salesforce.com',
+  },
+  {
+    id: 7,
+    company: 'Facebook',
+    stars: '4.8',
+    logo: 'https://logo.clearbit.com/facebook.com',
+  },
+];
+
 export const MockChats = [
   {
     id: 1,

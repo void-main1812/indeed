@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf55951b-b18a-48d8-85cb-28aa5b9725ee" name="Changes" comment=":sparkles: Feat: Settings Screen">
+    <list default="true" id="bf55951b-b18a-48d8-85cb-28aa5b9725ee" name="Changes" comment=":sparkles: Feat: Job Preferences Screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/secondary/JobPreferances.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/secondary/JobPreferances.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mockData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/mockData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/drawer-navigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/drawer-navigator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/secondary/CompanyProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/secondary/CompanyProfile.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +134,7 @@
       <workItem from="1715795046840" duration="4766000" />
       <workItem from="1715835526699" duration="3147000" />
       <workItem from="1715849072582" duration="560000" />
+      <workItem from="1716312664486" duration="1219000" />
     </task>
     <task id="LOCAL-00001" summary=":heavy_plus_sign: Add: Size variable for Height and width and colour variables">
       <option name="closed" value="true" />
